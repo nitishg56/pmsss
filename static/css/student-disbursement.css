@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #e0f0ff;
+    padding: 20px;
+    border-bottom: 5px solid #002f6c;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-section {
+    display: flex;
+    margin-left: 2px;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 160px;
+}
+
+.department-title h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.department-title h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* language selector start*/
+#google_translate_element {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 9999; /* Make sure it's on top of other elements */
+}
+/* language selector end*/
+
+/* Navigation Bar */
+.navbar {
+    background-color: #344482;
+    margin-top: 15px;
+    margin-bottom: 0.1px;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #283a5a;
+    border-radius: 5px;
+}
+
+.student-info {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.student-info h2 {
+    margin: 0;
+    color: #1a237e;
+}
+
+.disbursement-status {
+    margin-bottom: 30px;
+}
+
+.status-tracker {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.status-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.status-step::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: calc(-50% + 15px);
+    right: calc(50% + 15px);
+    height: 2px;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+.status-step:first-child::before {
+    display: none;
+}
+
+.status-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+.status-label {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.status-step[data-status="completed"] .status-icon {
+    background-color: #4caf50;
+}
+
+.status-step[data-status="completed"]::before {
+    background-color: #4caf50;
+}
+
+.disbursement-details {
+    margin-bottom: 30px;
+}
+
+#disbursementTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#disbursementTable th, #disbursementTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#disbursementTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#disbursementTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.disbursement-summary {
+    margin-bottom: 30px;
+}
+
+.summary-chart-container {
+    height: 300px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#queryForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#queryForm label {
+    font-weight: bold;
+}
+
+#queryForm select, #queryForm textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#queryForm button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .status-tracker {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .status-step {
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+
+    .status-step::before {
+        display: none;
+    }
+
+    .status-label {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+}

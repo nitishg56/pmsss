@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+
+.header {
+    background-color: #e0f0ff;
+    padding: 20px;
+    border-bottom: 5px solid #002f6c;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-section {
+    display: flex;
+    margin-left: 2px;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 160px;
+}
+
+.department-title h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.department-title h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* language selector start*/
+#google_translate_element {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 9999; /* Make sure it's on top of other elements */
+}
+
+.dashboard-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #003366;
+    display: flex;
+    gap: 15px;
+}
+
+.dashboard-navbar ul li {
+    position: relative;
+}
+
+.dashboard-navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.dashboard-navbar ul li:hover a {
+    background-color: #0059b3;
+}
+
+main {
+    padding: 20px;
+}
+
+.overview {
+    text-align: center;
+}
+.dashboard-container {
+    padding: 20px;
+}
+
+.quick-links, .notifications, .statistics {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin: 10px 0;
+}
+.quick-links ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.quick-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Notifications */
+.notifications p {
+    color: #555;
+    font-style: italic;
+}
+
+/* Statistics Section */
+.statistics .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-item {
+    background: #0056b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+.stat-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.stat-item p {
+    margin: 10px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: #0059b3;
+}
+
+.announcements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.announcements ul li {
+    background: #e8f0fe;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 20px 0;
+    text-align: center; /* Center align all text */
+    font-family: 'Times New Roman', Times, serif, sans-serif; /* Font family */
+    color: #333; /* Text color */
+}
+
+/* Content container */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    gap: 10px; /* Space between elements */
+}
+
+/* Logo container styling */
+.footer-logos {
+    display: flex;
+    justify-content: center; /* Center logos horizontally */
+    gap: 20px; /* Space between logos */
+    margin-bottom: 15px; /* Space below the logos */
+}
+
+/* Styling for individual logos */
+.footer-logos img {
+    max-width: 100px; /* Max width for logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation links styling */
+.footer-links {
+    display: flex;
+    align-items: center; /* Center align text vertically */
+    gap: 20px; /* Space between links */
+}
+/* Footer Styles */
+.footer-links a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link text color */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Update information styling */
+.footer-update {
+    background-color: #002f6c; /* Light grey background for update section */
+    padding: 15px;
+    font-size: 16px; /* Font size for update text */
+    color: #e0f0ff; /* Text color */
+}

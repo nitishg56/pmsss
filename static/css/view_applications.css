@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #e0f0ff;
+    padding: 20px;
+    border-bottom: 5px solid #002f6c;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-section {
+    display: flex;
+    margin-left: 2px;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 160px;
+}
+
+.department-title h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.department-title h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* language selector start*/
+#google_translate_element {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 9999; /* Make sure it's on top of other elements */
+}
+.applications-container {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.footer {
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 20px 0;
+    text-align: center; /* Center align all text */
+    font-family: 'Times New Roman', Times, serif, sans-serif; /* Font family */
+    color: #333; /* Text color */
+}
+
+/* Content container */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    gap: 10px; /* Space between elements */
+}
+
+/* Logo container styling */
+.footer-logos {
+    display: flex;
+    justify-content: center; /* Center logos horizontally */
+    gap: 20px; /* Space between logos */
+    margin-bottom: 15px; /* Space below the logos */
+}
+
+/* Styling for individual logos */
+.footer-logos img {
+    max-width: 100px; /* Max width for logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation links styling */
+.footer-links {
+    display: flex;
+    align-items: center; /* Center align text vertically */
+    gap: 20px; /* Space between links */
+}
+/* Footer Styles */
+.footer-links a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link text color */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Update information styling */
+.footer-update {
+    background-color: #002f6c; /* Light grey background for update section */
+    padding: 15px;
+    font-size: 16px; /* Font size for update text */
+    color: #e0f0ff; /* Text color */
+}

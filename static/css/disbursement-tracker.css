@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #e0f0ff;
+    padding: 20px;
+    border-bottom: 5px solid #002f6c;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-section {
+    display: flex;
+    margin-left: 2px;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 160px;
+}
+
+.department-title h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.department-title h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* language selector start*/
+#google_translate_element {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 9999; /* Make sure it's on top of other elements */
+}
+/* language selector end*/
+
+/* Navigation Bar */
+.navbar {
+    background-color: #344482;
+    margin-top: 15px;
+    margin-bottom: 0.1px;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #283a5a;
+    border-radius: 5px;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.status-pending {
+    color: #ffa000;
+    font-weight: bold;
+}
+
+.status-completed {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#currentPage {
+    font-weight: bold;
+}
+
+/* General footer styling */
+.footer {
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 20px 0;
+    text-align: center; /* Center align all text */
+    font-family: 'Times New Roman', Times, serif, sans-serif; /* Font family */
+    color: #333; /* Text color */
+}
+
+/* Content container */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    gap: 10px; /* Space between elements */
+}
+
+/* Logo container styling */
+.footer-logos {
+    display: flex;
+    justify-content: center; /* Center logos horizontally */
+    gap: 20px; /* Space between logos */
+    margin-bottom: 15px; /* Space below the logos */
+}
+
+/* Styling for individual logos */
+.footer-logos img {
+    max-width: 100px; /* Max width for logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation links styling */
+.footer-links {
+    display: flex;
+    align-items: center; /* Center align text vertically */
+    gap: 20px; /* Space between links */
+}
+
+/* Individual link styling */
+.footer-links a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link text color */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Update information styling */
+.footer-update {
+    background-color: #002f6c; /* Light grey background for update section */
+    padding: 15px;
+    font-size: 16px; /* Font size for update text */
+    color: #e0f0ff; /* Text color */
+}
