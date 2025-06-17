@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="/static/css/P_update.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <b>
+                    <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                   </b>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/S_registration.html">1. Student Registration</a></li>
+                <li><a href="/templates/P_update.html">2. Profile Updation</a></li>
+                <li><a href="/templates/Notification.html">3. Academic Details</a></li>
+                <li><a href="/templates/B_details.html">4. Bank Details</a></li>
+                <li><a href="/templates/CD_detail.html">5. Caste & Domicile</a></li>
+                <li><a href="/templates/IC_details.html">6. Income Certificate</a></li>
+                <li><a href="/templates/LA_details.html">7. Lock Application</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+        <form id="studentForm" class="registration-form">
+            <!-- Basic Details Section -->
+            <section class="form-section">
+                <h2>Other Basic Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fatherOccupation">Father's / Guardian Occupation *</label>
+                        <select id="fatherOccupation" required>
+                            <option value="">Select Occupation</option>
+                            <option value="Bussiness ">Bussiness</option>
+                            <option value="Govt. job">Govt. job</option>
+                            <option value="PVT. Job">PVT. Job</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="motherOccupation">Mother's Occupation *</label>
+                        <select id="motherOccupation" required>
+                            <option value="">Select Occupation</option>
+                            <option value="Bussiness ">Bussiness</option>
+                            <option value="Govt. job">Govt. job</option>
+                            <option value="PVT. Job">PVT. Job</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="religion">Religion *</label>
+                        <select id="religion" required>
+                            <option value="">Select Religion</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="muslim">Muslim</option>
+                            <option value="christian">Christian</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Household Category *</label>
+                    <div class="radio-group">
+                        <input type="radio" id="bpl" name="householdCategory" value="bpl" required>
+                        <label for="bpl">BPL (Below Poverty Line)</label>
+                        <input type="radio" id="apl" name="householdCategory" value="apl">
+                        <label for="apl">APL (Above Poverty Line)</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bplNumber">Enter BPL Number *</label>
+                    <input type="text" id="bplNumber" pattern="\d*" maxlength="12">
+                </div>
+            </section>
+
+            <!-- Address Section -->
+            <section class="form-section">
+                <h2>Correspondence Address</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="district">District *</label>
+                        <select id="district" required>
+                            <option value="">Select District</option>
+                            <option value="dhamtari">DHAMTARI</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Siltara">Siltara</option>
+                            <option value="Durg">DHAMTARI</option>
+                            <option value="Bhilai">DHAMTARI</option>
+                            <option value="Bastar">DHAMTARI</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="block">Block *</label>
+                        <select id="block" required>
+                            <option value="">Select Block</option>
+                            <option value="dhamtari">DHAMTARI</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Siltara">Siltara</option>
+                            <option value="Durg">DHAMTARI</option>
+                            <option value="Bhilai">DHAMTARI</option>
+                            <option value="Bastar">DHAMTARI</option>
+                        </select>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address *</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode *</label>
+                    <input type="text" id="pincode" pattern="\d*" maxlength="6" required>
+                </div>
+            </section>
+
+            <!-- Photo Upload Section -->
+            <section class="form-section">
+                <h2>Upload Student Photo</h2>
+                <div class="photo-upload">
+                    <input type="file" id="photoUpload" accept=".jpg,.jpeg" required>
+                    <p class="file-info">Note: Only JPG file (Max 50KB) is allowed</p>
+                    <div id="photoPreview" class="photo-preview"></div>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit"><a href="/templates/A_details.html">Update</a></button>
+                <button type="button" class="btn-cancel">Cancel</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+    <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+    
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+    <script src="/static/js/P_update.js"></script>
+</body>
+</html>

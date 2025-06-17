@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Matric Scholarship Registration</title>
+    <link rel="stylesheet" href="/static/css/A_details.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <b>
+                    <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                   </b>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/S_registration.html">1. Student Registration</a></li>
+                <li><a href="/templates/P_update.html">2. Profile Updation</a></li>
+                <li><a href="/templates/A_details.html">3. Academic Details</a></li>
+                <li><a href="/templates/B_details.html">4. Bank Details</a></li>
+                <li><a href="/templates/CD_detail.html">5. Caste & Domicile</a></li>
+                <li><a href="/templates/IC_details.html">6. Income Certificate</a></li>
+                <li><a href="/templates/LA_details.html">7. Lock Application</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<!-- Progress Steps -->
+<section class="progress-bar">
+    <div class="steps">
+        <div class="step completed">1. Student Registration</div>
+        <div class="step completed">2. Profile Updation</div>
+        <div class="step completed">3. Academic Details</div>
+        <div class="step completed">4. Bank Details</div>
+        <div class="step completed">5. Caste & Domicile</div>
+        <div class="step completed">6. Income Certificate</div>
+        <div class="step active">7. Lock Application</div>
+    </div>
+</section>
+    <div class="container">
+        <form action="RegistrationServlet" method="POST" enctype="multipart/form-data">
+            <!-- Current Institute Location -->
+            <section class="form-section">
+                <h2>Current Institute Location</h2>
+                <div class="alert-note">
+                    NOTE: This Selection is not editable once SAVED, Please be careful in selecting this.
+                </div>
+                <div class="radio-group">
+                    <label>Select Institute State:*</label>
+                    <div class="radio-options">
+                        <label>
+                            <input type="radio" name="instituteState" value="Chhattisgarh" required> Chhattisgarh State
+                        </label>
+                        <label>
+                            <input type="radio" name="instituteState" value="Other"> Other State
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Institute Details -->
+            <section class="form-section">
+                <h2>Current Institute Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="district">Select Institute District*</label>
+                        <select id="district" name="district" required>
+                            <option value="RAIPUR">RAIPUR</option>
+                            <!-- Add other districts -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="institute">Select Institute*</label>
+                        <select id="institute" name="institute" required>
+                            <option value="AMITY UNIVERSITY, RAIPUR">AMITY UNIVERSITY, RAIPUR</option>
+                            <!-- Add other institutes -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="instituteId">Selected Institute Id</label>
+                        <input type="text" id="instituteId" name="instituteId" value="23870057" readonly>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="admissionDate">Admission Date (DD-MM-YYYY)*</label>
+                        <input type="date" id="admissionDate" name="admissionDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollmentNumber">Enrollment Number</label>
+                        <input type="text" id="enrollmentNumber" name="enrollmentNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollmentDate">Enrollment Date (DD-MM-YYYY)</label>
+                        <input type="date" id="enrollmentDate" name="enrollmentDate">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Course Details -->
+            <section class="form-section">
+                <h2>Current Course Details</h2>
+                <div class="info-note">
+                    If you are not seeing your course in your institution, then contact the institution immediately. 
+                    The course will be displayed here only after they have added the course from their login.
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="admissionType">Select Admission Type*</label>
+                        <select id="admissionType" name="admissionType" required>
+                            <option value="Merit">Merit Basis</option>
+                            <!-- Add other types -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modeOfStudy">Mode of Study*</label>
+                        <select id="modeOfStudy" name="modeOfStudy" required>
+                            <option value="Regular">Regular Course</option>
+                            <!-- Add other modes -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Select Course*</label>
+                        <select id="course" name="course" required>
+                            <option value="BTech">B. Tech</option>
+                            <!-- Add other courses -->
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- File Upload Section -->
+            <section class="form-section">
+                <h2>Upload Previous / Last Exam Marksheet</h2>
+                <div class="file-upload">
+                    <div class="alert-note">
+                        NOTE: Please upload marksheet of previous / last exam passed.
+                    </div>
+                    <div class="upload-container">
+                        <input type="file" id="marksheet" name="marksheet" accept=".pdf,.jpg,.jpeg" required>
+                        <p class="file-note">Note: Only PDF, JPG file (Max 120KB) is allowed</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit"><a href="/templates/B_details.html">Update</a></button>
+                <button type="button" class="btn-cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+    <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+    
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+    <script src="/static/js/A_details.js"></script>
+
+</body>
+</html>

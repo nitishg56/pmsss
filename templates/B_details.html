@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Details - Student Registration</title>
+    <link rel="stylesheet" href="/static/css/B_details.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <b>
+                    <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                   </b>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/S_registration.html">1. Student Registration</a></li>
+                <li><a href="/templates/P_update.html">2. Profile Updation</a></li>
+                <li><a href="/templates/Notification.html">3. Academic Details</a></li>
+                <li><a href="/templates/B_details.html">4. Bank Details</a></li>
+                <li><a href="/templates/CD_detail.html">5. Caste & Domicile</a></li>
+                <li><a href="/templates/IC_details.html">6. Income Certificate</a></li>
+                <li><a href="/templates/LA_details.html">7. Lock Application</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+       
+        <form action="BankDetailsServlet" method="POST" enctype="multipart/form-data">
+            <div class="form-section">
+                <h2>Bank Details</h2>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="ifscCode">IFSC Code<span class="required">*</span></label>
+                        <input type="text" id="ifscCode" name="ifscCode" pattern="^[A-Z]{4}0[A-Z0-9]{6}$" 
+                               required maxlength="11" value="">
+                        <span class="hint">Enter valid IFSC code</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bankName">Bank Name</label>
+                        <input type="text" id="bankName" name="bankName" 
+                               value="" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="branchName">Branch Name<span class="required">*</span></label>
+                        <select id="branchName" name="branchName" required>
+                            <option value=""></option>
+                            <!-- Other branches would be populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" readonly></textarea>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="accountNumber">Account Number<span class="required">*</span></label>
+                        <input type="text" id="accountNumber" name="accountNumber" 
+                               required pattern="^\d{14}$" value="">
+                        <span class="hint">Enter 14-digit account number</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmAccountNumber">Confirm Account Number<span class="required">*</span></label>
+                        <input type="text" id="confirmAccountNumber" name="confirmAccountNumber" 
+                               required pattern="^\d{14}$" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passbookScan">Passbook Scan Copy<span class="required">*</span></label>
+                        <input type="file" id="passbookScan" name="passbookScan" 
+                               accept=".pdf,.jpg,.jpeg" required>
+                        <div class="file-note">Note: Only PDF, JPG file (Max 120KB) is allowed</div>
+                        <div class="file-icon">
+                            <img src="check-icon.png" alt="File verification icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="aadhaarSeededBank">Select Aadhaar Seeded Bank<span class="required">*</span></label>
+                    <select id="aadhaarSeededBank" name="aadhaarSeededBank" required>
+                        <option value=""></option>
+                        <!-- Other banks would be populated dynamically -->
+                    </select>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="aadhaarConfirmation" name="aadhaarConfirmation" required>
+                        <span class="checkbox-text">मैं सत्यापित करता / करती हूँ कि मेरा बैंक अकाउंट सक्रिय है एवं मेरे द्वारा प्रदान किया गया बैंक खाता विवरण मेरे आधार नंबर के साथ सीडेड है ।</span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit"><a href="/templates/CD_detail.html">Update</a></button>
+                    <button type="button" class="btn-cancel">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+    <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+    
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+   
+    <script src="/static/js/B_details.js"></script>
+</body>
+</html>

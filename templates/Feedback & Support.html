@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Support - SAG Bureau Admin</title>
+    <link rel="stylesheet" href="/static/css/Feedback & Support.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <B>
+                    
+                    <h1> Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1></B>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/index.html">Home</a></li>
+                <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+                <li><a href="/templates/Notification.html">Notification</a></li>
+                <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+                <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+                <li><a href="/templates/FAQ's.html">FAQ</a></li>
+                <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>SAG Bureau Admin</h2>
+            <nav>
+                <ul>
+                    <li><a href="/templates/SAG dashboard.html">Dashboard Overview</a></li>
+                    <br>
+                    <li><a href="/templates/application.html">Applications Management</a></li>
+                    <br>
+                    <li><a href="/templates/disbursement.html">Scholarship Disbursement</a></li>
+                    <br>
+                    <li><a href="/templates/Document Management.html">Document Management</a></li>
+                    <br>
+                    <li><a href="/templates/Reports & Analytics.html">Reports & Analytics</a></li>
+                    <br>
+                    <li><a href="/templates/User Management.html">User Management</a></li>
+                    <br>
+                    <li><a href="/templates/Notifications & Alerts.html">Notifications & Alerts</a></li>
+                    <br>
+                    <li><a href="/templates/Feedback & Support.html" class="active">Feedback & Support</a></li>
+                    <br>
+                    <li><a href="/templates/Settings.html">Settings</a></li>
+                    <br>
+                    <li><a href="/templates/Security & Compliance.html">Security & Compliance</a></li>
+                </ul>
+            </nav>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>Feedback & Support</h1>
+            
+            <section id="feedbackSection">
+                <h2>Applicant Feedback</h2>
+                <div id="feedbackList">
+                    <!-- Feedback items will be dynamically added here -->
+                </div>
+            </section>
+            
+            <section id="supportTicketsSection">
+                <h2>Support Tickets</h2>
+                <div id="ticketList">
+                    <!-- Ticket items will be dynamically added here -->
+                </div>
+            </section>
+            
+            <div id="ticketDetailsModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Ticket Details</h2>
+                    <div id="ticketDetails"></div>
+                    <div id="ticketInteractions"></div>
+                    <div class="ticket-actions">
+                        <select id="assignAdmin">
+                            <option value="">Assign to Admin</option>
+                            <option value="admin1">Admin 1</option>
+                            <option value="admin2">Admin 2</option>
+                            <option value="admin3">Admin 3</option>
+                        </select>
+                        <button id="resolveTicket">Resolve Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+             <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+    <script src="/static/js/Feedback & Support.js"></script>
+</body>
+</html>

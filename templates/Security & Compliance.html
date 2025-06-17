@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Compliance - SAG Bureau Admin</title>
+    <link rel="stylesheet" href="/static/css/Security & Compliance.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <B>
+                    
+                    <h1> Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1></B>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/index.html">Home</a></li>
+                <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+                <li><a href="/templates/Notification.html">Notification</a></li>
+                <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+                <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+                <li><a href="/templates/FAQ's.html">FAQ</a></li>
+                <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>SAG Bureau Admin</h2>
+            <nav>
+                <ul>
+                    <li><a href="/templates/SAG dashboard.html">Dashboard Overview</a></li>
+                    <br>
+                    <li><a href="/templates/application.html">Applications Management</a></li>
+                    <br>
+                    <li><a href="/templates/disbursement.html">Scholarship Disbursement</a></li>
+                    <br>
+                    <li><a href="/templates/Document Management.html">Document Management</a></li>
+                    <br>
+                    <li><a href="/templates/Reports & Analytics.html">Reports & Analytics</a></li>
+                    <br>
+                    <li><a href="/templates/User Management.html">User Management</a></li>
+                    <br>
+                    <li><a href="/templates/Notifications & Alerts.html">Notifications & Alerts</a></li>
+                    <br>
+                    <li><a href="/templates/Feedback & Support.html">Feedback & Support</a></li>
+                    <br>
+                    <li><a href="/templates/Settings.html">Settings</a></li>
+                    <br>
+                    <li><a href="/templates/Security & Compliance.html" class="active">Security & Compliance</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>Security & Compliance</h1>
+            
+            <section id="dataEncryption">
+                <h2>Data Encryption Settings</h2>
+                <div id="encryptionInfo">
+                    <p><strong>Encryption Algorithm:</strong> <span id="encryptionAlgorithm"></span></p>
+                    <p><strong>Key Length:</strong> <span id="keyLength"></span> bits</p>
+                    <p><strong>Last Updated:</strong> <span id="lastUpdated"></span></p>
+                </div>
+                <button id="updateEncryption">Update Encryption Settings</button>
+            </section>
+            
+            <section id="complianceReports">
+                <h2>Compliance Reports</h2>
+                <table id="complianceTable">
+                    <thead>
+                        <tr>
+                            <th>Report Name</th>
+                            <th>Compliance Standard</th>
+                            <th>Last Generated</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Report rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+            
+            <section id="activityLogs">
+                <h2>Activity Logs</h2>
+                <div class="log-filters">
+                    <input type="text" id="userFilter" placeholder="Filter by user">
+                    <input type="date" id="dateFilter">
+                    <select id="actionFilter">
+                        <option value="">All Actions</option>
+                        <option value="login">Login</option>
+                        <option value="data_access">Data Access</option>
+                        <option value="settings_change">Settings Change</option>
+                        <option value="report_generation">Report Generation</option>
+                    </select>
+                </div>
+                <table id="activityTable">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Activity log rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+            
+            <section id="accessControl">
+                <h2>Access Control Management</h2>
+                <form id="accessControlForm">
+                    <div class="form-group">
+                        <label for="userRole">User Role:</label>
+                        <select id="userRole" name="userRole" required>
+                            <option value="admin">Admin</option>
+                            <option value="verifier">Verifier</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Permissions:</label>
+                        <div>
+                            <input type="checkbox" id="viewApplications" name="viewApplications">
+                            <label for="viewApplications">View Applications</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="editApplications" name="editApplications">
+                            <label for="editApplications">Edit Applications</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="approveDisbursements" name="approveDisbursements">
+                            <label for="approveDisbursements">Approve Disbursements</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="generateReports" name="generateReports">
+                            <label for="generateReports">Generate Reports</label>
+                        </div>
+                    </div>
+                    <button type="submit">Update Access Control</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+             <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+</body>
+
+
+    <script src="/static/js/Security & Compliance.js"></script>
+</body>
+</html>

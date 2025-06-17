@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Minister's Special Scholarship Scheme</title>
+    <link rel="stylesheet" href="/static/css/Feedback And Grievance.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+   
+  <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <B>
+                    
+                    <h1> Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1></B>
+                </div>
+            </div>
+
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/index.html">Home</a></li>
+                <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+                <li><a href="/templates/Notification.html">Notification</a></li>
+                <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+                <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+                <li><a href="/templates/FAQ's.html">FAQ</a></li>
+                <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <div class="feedback-form">
+        <h2>Feedback</h2>
+    
+        <form id="feedbackForm">
+            <!-- Name Input -->
+            <label for="name">Your Name <span class="required">*</span></label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <br>
+    
+            <!-- Email Input -->
+            <label for="email">E-mail ID <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="E-mail id" required>
+            <br>
+    
+            <!-- Mobile Number Input -->
+            <label for="mobile">Mobile Number <span class="required">*</span></label>
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+            <br>
+    
+            <!-- Issue Dropdown -->
+            <label for="issue">Issue <span class="required">*</span></label>
+            <select id="issue" required>
+                <option value="" disabled selected>Select</option>
+                <option value="scholarship">Scholarship Issue</option>
+                <option value="application">Application Issue</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+    
+            <!-- District Dropdown -->
+            <label for="district">District <span class="required">*</span></label>
+            <select id="district" required>
+                <option value="" disabled selected>Select</option>
+                <option value="district1">District 1</option>
+                <option value="district2">District 2</option>
+                <option value="district3">District 3</option>
+            </select>
+            <br>
+    
+            <!-- Message Textarea -->
+            <label for="message">Your Message <span class="required">*</span></label>
+            <textarea id="message" placeholder="Enter feedback" rows="4" required></textarea>
+            <br>
+    
+            <!-- CAPTCHA -->
+            <label for="captcha">Enter the code shown below <span class="required">*</span></label>
+            <input type="text" id="captcha" placeholder="Enter Captcha" required>
+            <div class="captcha-container">
+                <span id="captchaCode">0U6WXV</span>
+                <img src="/static/images/refresh-icon.png" alt="Reload Captcha" id="reloadCaptcha" class="reload-icon">
+            </div>
+            <br>
+    
+            <!-- Buttons -->
+            <button type="submit" class="btn submit">Submit</button>
+            <button  type="button" class="btn clear">Clear</button>
+        </form>
+    </div>
+   
+    <script src="/static/js/Feedback And Grievance.js"></script>
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+             <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+</body>
+
+</html>

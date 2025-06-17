@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Notification - PMSSS</title>
+    <link rel="stylesheet" href="/static/css/send_notification.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                    <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                </div>
+            </div>
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="/templates/index.html">Home</a></li>
+            <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+            <li><a href="/templates/Notification.html">Notification</a></li>
+            <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+            <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+            <li><a href="/templates/FAQ's.html">FAQ</a></li>
+            <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>SAG Bureau Admin</h2>
+            <nav>
+                <ul>
+                    <li><a href="/templates/SAG dashboard.html">Dashboard Overview</a></li>
+                    <li><a href="/templates/application.html">Applications Management</a></li>
+                    <li><a href="/templates/disbursement.html">Scholarship Disbursement</a></li>
+                    <li><a href="/templates/Document Management.html">Document Management</a></li>
+                    <li><a href="/templates/Reports & Analytics.html">Reports & Analytics</a></li>
+                    <li><a href="/templates/User Management.html">User  Management</a></li>
+                    <li><a href="/templates/Notifications & Alerts.html">Notifications & Alerts</a></li>
+                    <li><a href="/templates/Feedback & Support.html">Feedback & Support</a></li>
+                    <li><a href="/templates/Settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>Send Notification</h1>
+            <form id="sendNotificationForm">
+                <div class="form-group">
+                    <label for="notificationTitle">Notification Title:</label>
+                    <input type="text" id="notificationTitle" name="notificationTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="notificationMessage">Notification Message:</label>
+                    <textarea id="notificationMessage" name="notificationMessage" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="notificationType">Notification Type:</label>
+                    <select id="notificationType" name="notificationType" required>
+                        <option value="info">Information</option>
+                        <option value="warning">Warning</option>
+                        <option value="alert">Alert</option>
+                    </select>
+                </div>
+                <button type="submit">Send Notification</button>
+            </form>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <img src="/static/images/nic_logo.png" alt="NIC Logo">
+                <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+                <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+                <img src="/static/images/data.png" alt="India.gov.in Logo">
+            </div>
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">

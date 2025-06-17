@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Matric Scholarship Registration</title>
+    <link rel="stylesheet" href="/static/css/MR_profile.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo and Title -->
+                <div class="left-section">
+                    <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                    <div class="department-title">
+                       <b>
+                        <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                       </b>
+                    </div>
+                </div>
+        
+                <!-- Profile Picture and Language Button -->
+                <div id="google_translate_element"></div>
+            </div>
+        
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="/templates/index.html">Home</a></li>
+                    <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+                    <li><a href="/templates/Notification.html">Notification</a></li>
+                    <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+                    <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+                    <li><a href="/templates/FAQ's.html">FAQ</a></li>
+                    <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <form id="registrationForm" onsubmit="handleSubmit(event)">
+            <!-- Basic Details Section -->
+            <section class="form-section">
+                <h2>Basic Details</h2>
+                <div class="note">Please ensure Name, Gender and Date of Birth is as per AADHAAR details.</div>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <input type="text" id="confirmFirstName" name="confirmFirstName" placeholder="Confirm First Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" id="middleName" name="middleName">
+                        <input type="text" id="confirmMiddleName" name="confirmMiddleName" placeholder="Confirm Middle Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName">
+                        <input type="text" id="confirmLastName" name="confirmLastName" placeholder="Confirm Last Name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you Orphan? *</label>
+                    <div class="radio-group">
+                        <input type="radio" id="orphanYes" name="orphan" value="yes">
+                        <label for="orphanYes">Yes</label>
+                        <input type="radio" id="orphanNo" name="orphan" value="no">
+                        <label for="orphanNo">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guardian">Father/Mother/Guardian Name *</label>
+                    <input type="text" id="guardian" name="guardian" required>
+                    <input type="text" id="confirmGuardian" name="confirmGuardian" placeholder="Confirm Guardian Name" required>
+                </div>
+            </section>
+
+            <!-- Profile Related Details -->
+            <section class="form-section">
+                <h2>Profile Related Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required>
+                        <input type="date" id="confirmDob" name="confirmDob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="">--Select--</option>
+                            <option value="ST">ST</option>
+                            <option value="SC">SC</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">--Select--</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Details -->
+            <section class="form-section">
+                <h2>Personal Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="aadhaar">Aadhaar Number *</label>
+                        <input type="text" id="aadhaar" name="aadhaar" pattern="[0-9]{12}" required>
+                        <small>This AADHAAR Number will be verified through e-KYC</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number *</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                        <small>This Mobile Number will be registered for using the services of this portal.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail ID *</label>
+                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm Email" required>
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <div class="form-actions">
+                    <a href="/templates/C_Password.html" class="btn-submit">Save & Register</a>
+                </div>
+                <button type="button" class="btn-cancel" onclick="handleCancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+            
+<!-- Footer Section -->
+
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Logos -->
+        <div class="footer-logos">
+            <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+            <br>
+            <br>
+        <img src="/static/images/nic_logo.png" alt="NIC Logo">
+        <br>
+        <br>
+        <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+        <br>
+        <br>
+        <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+        <br>
+        <br>
+        <img src="/static/images/data.png" alt="India.gov.in Logo">
+        <br>
+        <br>
+        </div>
+<B>
+        <!-- Navigation Links -->
+        <div class="footer-links">
+            <a href="/templates/copyright.html">Copyright Policy</a>
+            <span>|</span>
+            <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+            <span>|</span>
+            <a href="/templates/Disclaimer.html">Disclaimer</a>
+            <span>|</span>
+            <a href="/templates/Hyperlink.html">Hyperlink</a>
+            <span>|</span>
+            <a href="/templates/Site Map.html">Site Map</a>
+        </div>
+    </div>
+    <br>
+
+    <!-- Update Information -->
+    <div class="footer-update">
+        Last update on 10 September 2024
+    </div>
+</footer>
+
+    <script src="/static/js/MR_profile.js"></script>
+</body>
+</html>

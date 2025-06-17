@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Application Status</title>
+    <link rel="stylesheet" href="/static/css/update_status.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="AICTE Logo" class="logo">
+                <h1 class="department-title">Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+            </div>
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+            </script>
+            <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="update-status-container">
+        <h1>Update Application Status</h1>
+
+        <form id="updateStatusForm">
+            <div class="form-group">
+                <label for="applicationId">Application ID:</label>
+                <input type="text" id="applicationId" name="applicationId" placeholder="Enter Application ID" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="">--Select Status--</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="remarks">Remarks:</label>
+                <textarea id="remarks" name="remarks" rows="4" placeholder="Enter remarks (optional)"></textarea>
+            </div>
+
+            <button type="submit">Update Status</button>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <img src="/static/images/nic_logo.png" alt="NIC Logo">
+                <img src="/static/images/digital_logo.png" alt="Digital India Logo">
+                <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+                <img src="/static/images/data.png" alt="India.gov.in Logo">
+            </div>
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/privacy_policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/terms_conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/site_map.html">Site Map</a>
+            </div>
+        </div>
+        <div class="footer-update">Last updated on 10 September 2024</div>
+    </footer>
+
+    <script>
+        document.getElementById('updateStatusForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Simulate form submission
+            alert('Application status updated successfully!');
+        });
+    </script>
+</body>
+</html>

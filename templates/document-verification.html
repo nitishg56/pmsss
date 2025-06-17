@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Finance Dashboard - Document Verification</title>
+    <link rel="stylesheet" href="/static/css/finance-overview.css">
+    <link rel="stylesheet" href="/static/css/document-verification.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <B>
+                    
+                    <h1> Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1></B>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/index.html">Home</a></li>
+                <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+                <li><a href="/templates/Notification.html">Notification</a></li>
+                <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+                <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+                <li><a href="/templates/FAQ's.html">FAQ</a></li>
+                <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>PMSSS Finance</h2>
+            <nav>
+                <ul>
+                    <li><a href="/templates/finance-overview.html">Finance Overview</a></li>
+                    <li><a href="/templates/disbursement-tracker.html">Disbursement Tracker</a></li>
+                    <li><a href="/templates/payment-schedule.html">Payment Schedule</a></li>
+                    <li><a href="/templates/document-verification.html" class="active">Document Verification</a></li>
+                    <li><a href="/templates/financial-reporting.html">Financial Reporting</a></li>
+                    <li><a href="/templates/budget-allocation.html">Budget Allocation</a></li>
+                    <li><a href="/templates/student-disbursement.html">Student Disbursement</a></li>
+                    <li><a href="/templates/grievance-resolution.html">Grievance Resolution</a></li>
+                    <li><a href="/templates/notifications.html">Notifications</a></li>
+                    <li><a href="/templates/audit-compliance.html">Audit & Compliance</a></li>
+                    <li><a href="/templates/financial-helpdesk.html">Financial Helpdesk</a></li>
+                    <li><a href="/templates/financial-documents.html">Financial Documents</a></li>
+                    <li><a href="/templates/payment-gateway.html">Payment Gateway</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>Document and Fund Verification Panel</h1>
+            <div class="verification-container">
+                <div class="filters">
+                    <input type="text" id="searchInput" placeholder="Search by student name or ID">
+                    <select id="statusFilter">
+                        <option value="all">All Statuses</option>
+                        <option value="pending">Pending</option>
+                        <option value="verified">Verified</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+                <table id="verificationTable">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Document Type</th>
+                            <th>Submission Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be dynamically populated here -->
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button id="prevPage">Previous</button>
+                    <span id="currentPage">Page 1</span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="verificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Document Verification</h2>
+            <div id="documentDetails"></div>
+            <div class="verification-actions">
+                <button id="approveBtn" class="approve">Approve</button>
+                <button id="rejectBtn" class="reject">Reject</button>
+                <button id="flagBtn" class="flag">Flag for Review</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+             <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+    <script src="/static/js/document-verification.js"></script>
+</body>
+</html>

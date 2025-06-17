@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Scholarship - Display Details</title>
+    <style>
+        /* Styling for details display */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .detail-item {
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .label {
+            font-weight: bold;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your Submitted Details</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <span class="label">Name:</span>
+                <span id="name"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Date of Birth:</span>
+                <span id="dob"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Gender:</span>
+                <span id="gender"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Mobile Number:</span>
+                <span id="mobile"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Email Address:</span>
+                <span id="email"></span>
+            </div>
+        </div>
+
+        <button onclick="window.print()">Print Details</button>
+        <button onclick="generatePDF()">Generate PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Function to populate details from localStorage
+        function populateDetails() {
+            const storedData = localStorage.getItem('studentDetails');
+            if (storedData) {
+                const formData = JSON.parse(storedData);
+                document.getElementById('name').textContent = formData.name;
+                document.getElementById('dob').textContent = formData.dob;
+                document.getElementById('gender').textContent = formData.gender;
+                document.getElementById('mobile').textContent = formData.mobile;
+                document.getElementById('email').textContent = formData.email;
+            } else {
+                alert('No data found in localStorage!');
+            }
+        }
+
+        // Function to generate PDF
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.text("Student Details", 20, 30);
+            doc.text("Name: " + document.getElementById('name').textContent, 20, 40);
+            doc.text("Date of Birth: " + document.getElementById('dob').textContent, 20, 50);
+            doc.text("Gender: " + document.getElementById('gender').textContent, 20, 60);
+            doc.text("Mobile: " + document.getElementById('mobile').textContent, 20, 70);
+            doc.text("Email: " + document.getElementById('email').textContent, 20, 80);
+
+            doc.save('student-details.pdf');
+        }
+
+        // Call populate function on page load
+        window.onload = populateDetails;
+    </script>
+</body>
+</html>

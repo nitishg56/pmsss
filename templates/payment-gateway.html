@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Finance Dashboard - Payment Gateway</title>
+    <link rel="stylesheet" href="/static/css/finance-overview.css">
+    <link rel="stylesheet" href="/static/css/payment-gateway.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Header Section -->
+   
+<header class="header">
+    <div class="header-container">
+        <!-- Logo and Title -->
+        <div class="left-section">
+            <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+            <div class="department-title">
+               <B>
+                
+                <h1> Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1></B>
+            </div>
+        </div>
+
+        <!-- Profile Picture and Language Button -->
+        <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="/templates/index.html">Home</a></li>
+            <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+            <li><a href="/templates/Notification.html">Notification</a></li>
+            <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+            <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+            <li><a href="/templates/FAQ's.html">FAQ</a></li>
+            <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>PMSSS Finance</h2>
+            <nav>
+                <ul>
+                    <li><a href="/templates/finance-overview.html">Finance Overview</a></li>
+                    <li><a href="/templates/disbursement-tracker.html">Disbursement Tracker</a></li>
+                    <li><a href="/templates/payment-schedule.html">Payment Schedule</a></li>
+                    <li><a href="/templates/document-verification.html">Document Verification</a></li>
+                    <li><a href="/templates/financial-reporting.html">Financial Reporting</a></li>
+                    <li><a href="/templates/budget-allocation.html">Budget Allocation</a></li>
+                    <li><a href="/templates/student-disbursement.html">Student Disbursement</a></li>
+                    <li><a href="/templates/grievance-resolution.html">Grievance Resolution</a></li>
+                    <li><a href="/templates/notifications.html">Notifications</a></li>
+                    <li><a href="/templates/audit-compliance.html">Audit & Compliance</a></li>
+                    <li><a href="/templates/financial-helpdesk.html">Financial Helpdesk</a></li>
+                    <li><a href="/templates/financial-documents.html">Financial Documents</a></li>
+                    <li><a href="/templates/payment-gateway.html" class="active">Payment Gateway</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>Payment Gateway</h1>
+            <div class="payment-summary">
+                <div class="summary-card">
+                    <h3>Total Transactions</h3>
+                    <p id="totalTransactions">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Amount Processed</h3>
+                    <p id="totalAmount">₹0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Success Rate</h3>
+                    <p id="successRate">0%</p>
+                </div>
+            </div>
+            <div class="payment-sections">
+                <section class="payment-form">
+                    <h2>Process Payment</h2>
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="studentId">Student ID:</label>
+                            <input type="text" id="studentId" name="studentId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount (₹):</label>
+                            <input type="number" id="amount" name="amount" min="1" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentType">Payment Type:</label>
+                            <select id="paymentType" name="paymentType" required>
+                                <option value="">Select payment type</option>
+                                <option value="tuition">Tuition Fee</option>
+                                <option value="maintenance">Maintenance Allowance</option>
+                                <option value="books">Books and Supplies</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method:</label>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option value="">Select payment method</option>
+                                <option value="bank">Bank Transfer</option>
+                                <option value="upi">UPI</option>
+                                <option value="card">Debit/Credit Card</option>
+                            </select>
+                        </div>
+                        <button type="submit">Process Payment</button>
+                    </form>
+                </section>
+                <section class="transaction-history">
+                    <h2>Recent Transactions</h2>
+                    <table id="transactionTable">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Student ID</th>
+                                <th>Amount</th>
+                                <th>Type</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Transactions will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+
+ <!-- Footer Section -->
+ <footer class="footer">
+    <div class="footer-content">
+        <!-- Logos -->
+        <div class="footer-logos">
+            <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+            <br>
+            <br>
+        <img src="/static/images/nic_logo.png" alt="NIC Logo">
+        <br>
+        <br>
+        <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+        <br>
+        <br>
+        <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+        <br>
+        <br>
+        <img src="/static/images/data.png" alt="India.gov.in Logo">
+        <br>
+        <br>
+        </div>
+         <B>
+        <!-- Navigation Links -->
+        <div class="footer-links">
+            <a href="/templates/copyright.html">Copyright Policy</a>
+            <span>|</span>
+            <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+            <span>|</span>
+            <a href="/templates/Disclaimer.html">Disclaimer</a>
+            <span>|</span>
+            <a href="/templates/Hyperlink.html">Hyperlink</a>
+            <span>|</span>
+            <a href="/templates/Site Map.html">Site Map</a>
+        </div>
+    </div>
+    <br>
+
+    <!-- Update Information -->
+    <div class="footer-update">
+        Last update on 10 September 2024
+    </div>
+</footer>
+
+    <script src="/static/js/payment-gateway.js"></script>
+</body>
+</html>

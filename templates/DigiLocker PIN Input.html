@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Scholarship Portal</title>
+    <link rel="stylesheet" href="/static/css/DigiLocker PIN Input.css">
+</head>
+
+    <!-- Header Section -->
+    <body>
+
+            <div class="container">
+                <div class="header">
+                    <img src="/static/images/govt_logo.png" alt="India Logo" class="logo">
+                    <img src="/static/images/digilocker logo.webp" alt="DigiLocker Logo" class="digilocker-logo">
+                </div>
+                <br>
+            <div class="form-container">
+                <h3>You are already registered with DigiLocker</h3>
+                <br>
+                <p class="description">6 digit PIN provides extra security to your account with two factor authentication. Don't disclose your Security PIN to anyone.</p>
+    
+                <form id="registrationForm" action="#" class="pin-form">
+                    <label for="pin">Please enter your 6 digit Security PIN to Signin</label>
+                    <div class="pin-inputs">
+                        <input type="password" maxlength="1" required>
+                        <input type="password" maxlength="1" required>
+                        <input type="password" maxlength="1" required>
+                        <input type="password" maxlength="1" required>
+                        <input type="password" maxlength="1" required>
+                        <input type="password" maxlength="1" required>
+                    </div>
+                    <a href="#" class="forgot-pin">Forgot my PIN</a>
+                    <button href="/templates/DigiLocker Consent Page.html" type="submit" class="submit-btn">Done</button>  
+                </form>
+            
+                <script>
+                    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        window.location.href = "/templates/DigiLocker Consent Page.html";  // Redirect to the login page
+                    });  
+                </script>
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>

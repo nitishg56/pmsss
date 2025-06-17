@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification Portal</title>
+    <link rel="stylesheet" href="/static/css/CD_details.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <b>
+                    <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                   </b>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        </div>
+    
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/S_registration.html">1. Student Registration</a></li>
+                <li><a href="/templates/P_update.html">2. Profile Updation</a></li>
+                <li><a href="/templates/Notification.html">3. Academic Details</a></li>
+                <li><a href="/templates/B_details.html">4. Bank Details</a></li>
+                <li><a href="/templates/CD_detail.html">5. Caste & Domicile</a></li>
+                <li><a href="/templates/IC_details.html">6. Income Certificate</a></li>
+                <li><a href="/templates/LA_details.html">7. Lock Application</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Progress Steps -->
+<section class="progress-bar">
+    <div class="steps">
+        <div class="step completed">1. Student Registration</div>
+        <div class="step completed">2. Profile Updation</div>
+        <div class="step completed">3. Academic Details</div>
+        <div class="step completed">4. Bank Details</div>
+        <div class="step completed">5. Caste & Domicile</div>
+        <div class="step completed">6. Income Certificate</div>
+        <div class="step active">7. Lock Application</div>
+    </div>
+</section>
+    <main class="container">
+        <div class="certificate-forms">
+            <!-- Caste Certificate Form -->
+            <div class="certificate-form">
+                <h2>Caste Certificate</h2>
+                <p class="mandatory-note">Note: Fields marked with (*) are mandatory.</p>
+                
+                <form id="casteCertificateForm">
+                    <div class="form-group">
+                        <label>Is your Caste Certificate generated online? *</label>
+                        <div class="radio-group">
+                            <input type="radio" id="casteYes" name="casteOnline" value="yes" checked>
+                            <label for="casteYes">Yes</label>
+                            <input type="radio" id="casteNo" name="casteOnline" value="no">
+                            <label for="casteNo">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Certificate Generated From *</label>
+                        <div class="radio-group">
+                            <input type="radio" id="casteEDistrict" name="casteGenerated" value="eDistrict" checked>
+                            <label for="casteEDistrict">eDistrict</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="casteReference">Certificate / Application Reference Number *</label>
+                        <input type="text" id="casteReference" name="casteReference" value="" readonly>
+                    </div>
+
+                    <div class="success-message">
+                        "Caste Certificate is already uploaded in earlier Academic Year"
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel">✕ Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Domicile Certificate Form -->
+            <div class="certificate-form">
+                <h2>Domicile Certificate</h2>
+                <p class="mandatory-note">Note: Fields marked with (*) are mandatory.</p>
+                
+                <form id="domicileCertificateForm">
+                    <div class="form-group">
+                        <label>Is your Domicile certificate generated online? *</label>
+                        <div class="radio-group">
+                            <input type="radio" id="domicileYes" name="domicileOnline" value="yes" checked>
+                            <label for="domicileYes">Yes</label>
+                            <input type="radio" id="domicileNo" name="domicileOnline" value="no">
+                            <label for="domicileNo">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Certificate Generated From *</label>
+                        <div class="radio-group">
+                            <input type="radio" id="domicileEDistrict" name="domicileGenerated" value="eDistrict" checked>
+                            <label for="domicileEDistrict">eDistrict</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="domicileReference">Certificate / Application Reference Number *</label>
+                        <input type="text" id="domicileReference" name="domicileReference" value="" 
+        >
+                    </div>
+
+                    <div class="success-message">
+                        "Domicile Certificate is already uploaded in earlier Academic Year"
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel">✕ Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+    <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+    
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

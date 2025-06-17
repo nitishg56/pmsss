@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Scholarship - Student Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #004080;
+            color: white;
+            padding: 15px;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            height: 50px;
+        }
+        .department-title h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .navbar {
+            background-color: #0073e6;
+            padding: 10px;
+        }
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-right: 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        #student-details {
+            max-width: 800px;
+            margin: auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .application-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .meta-item {
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .detail-item {
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .student-photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .action-buttons button, .final-buttons button {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .action-buttons button:hover, .final-buttons button:hover {
+            background-color: #005bb5;
+        }
+        .footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-logos {
+            display: flex;
+            gap: 10px;
+        }
+        .footer-logos img {
+            max-width: 80px;
+            height: auto;
+        }
+        .footer-links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-update {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .application-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Title -->
+            <div class="left-section">
+                <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                <div class="department-title">
+                   <b>
+                    <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                   </b>
+                </div>
+            </div>
+    
+            <!-- Profile Picture and Language Button -->
+            <div id="google_translate_element"></div>
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/templates/index.html">Home</a></li>
+                <li><a href="/templates/Student Track Your Application.html">Application Status</a></li>
+                <li><a href="/templates/Notification.html">Notification</a></li>
+                <li><a href="/static/pdf/PMSSS-Student-Manual.pdf">How To Apply</a></li>
+                <li><a href="/templates/Feedback And Grievance.html">Feedback And Grievance</a></li>
+                <li><a href="/templates/FAQ's.html">FAQ</a></li>
+                <li><a href="/templates/Contact Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="student-details">
+            <h2>Request For Approval!!</h2>
+            <p>Here are your submitted details:</p>
+            <div class="application-meta">
+                <div class="meta-left">
+                    <div class="meta-item">
+                        <span class="label">APPLICATION ID:</span>
+                        <span class="value">23017620</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="label">APPLICATION DATE:</span>
+                        <span class="value">17-12-2023</span>
+                    </div>
+                </div>
+                <div class="meta-right">
+                    <div class="meta-item">
+                        <span class="label">STUDENT ID:</span>
+                        <span class="value">32237713592</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="label">VERIFICATION CODE:</span>
+                        <span class="value">58045</span>
+                    </div>
+                </div>
+                <div class="student-photo">
+                    <img src="/static/images/data.png" alt="Student Photo" class="photo">
+                </div>
+            </div>
+
+            <section class="form-section">
+                <h3>1. Personal Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">NAME:</span>
+                        <span class="value">JIVESH KUMAR NAGE</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">DATE OF BIRTH:</span>
+                        <span class="value">28-02-2003</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">GENDER:</span>
+                        <span class="value">Male</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">MOBILE NUMBER:</span>
+                        <span class="value">8120136188</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">EMAIL ADDRESS:</span>
+                        <span class="value">jiveshnage69@gmail.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">RELIGION:</span>
+                        <span class="value">Hindu</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">FATHER/GUARDIAN NAME:</span>
+                        <span class="value">KANHAIYA LAL NAGE</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">MOTHER NAME:</span>
+                        <span class="value">KUSUM NAGE</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>2. Academic Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">INSTITUTE:</span>
+                        <span class="value">AMITY UNIVERSITY, RAIPUR (Institute Id - 23870057), Block- TILDA, District- RAIPUR</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">ENROLLMENT NO:</span>
+                        <span class="value">A801052220264</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">COURSE:</span>
+                        <span class="value">B. Tech / Branch- Computer Science & Engineering / Year- 2nd Year</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">LAST EXAM RESULT (%):</span>
+                        <span class="value">[PASS] 77.16</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>3. Bank Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">BANK NAME:</span>
+                        <span class="value">PUNJAB NATIONAL BANK</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">BRANCH NAME:</span>
+                        <span class="value">NAGARI (MECHKA)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">IFSC CODE:</span>
+                        <span class="value">PUNB0268000</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">ACCOUNT NUMBER:</span>
+                        <span class="value">268000150004508</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>4. Certificate Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">CASTE CERTIFICATE NUMBER:</span>
+                        <span class="value">0705011809004567</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">DOMICILE CERTIFICATE NUMBER:</span>
+                        <span class="value">0707011809007723</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">INCOME CERTIFICATE NUMBER:</span>
+                        <span class="value">0706012209021293</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Approve and Reject Buttons -->
+            <div class="action-buttons">
+                <button id="approve-button"><a href="/templates/Approve.html">Approve</a></button>
+                <button id="reject-button"><a href="/templates/reject.html">Reject</a></button>
+            </div>
+
+            <!-- Submit and Print Details Buttons -->
+            <div class="final-buttons">
+                <!-- <button id="submit-details">Submit</button> -->
+                <!-- <button id="print-details">Print Details</button> -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <img src="/static/images/nic_logo.png" alt="NIC Logo">
+                <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+                <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+                <img src="/static/images/data.png" alt="India.gov.in Logo">
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+    <script src="/static/js/Student_info.js"></script>
+</body>
+</html>

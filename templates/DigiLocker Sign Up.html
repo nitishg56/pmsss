@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiLocker Sign Up</title>
+    <link rel="stylesheet" href="/static/css/DigiLocker Sign Up.css">
+</head>
+   <!-- Banner Section -->
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/static/images/govt_logo.png" alt="India Logo" class="logo">
+            <img src="/static/images/digilocker logo.webp" alt="DigiLocker Logo" class="digilocker-logo">
+        </div>
+        <div class="signup-box">
+            <h2>Sign up</h2>
+            <p>It takes just a minute</p>
+            <form id="registrationForm" action="#" method="post">
+                <label for="aadhaar">Enter your Aadhaar Number</label>
+                <div class="aadhaar-input">
+                    <input type="text" id="aadhaar" maxlength="4" required>
+                    <input type="text" maxlength="4" required>
+                    <input type="text" maxlength="4" required>
+                </div>
+                <p class="subtext">DigiLocker uses Aadhaar to enable authentic document access</p>
+                <button href="/templates/verify aadhar OTP.html" type="submit">Verify Aadhar Card</button>    
+            </form>
+        
+            <script>
+                document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    window.location.href = "/templates/verify aadhar OTP.html";  // Redirect to the login page
+                });  
+            </script>
+        </div>
+        <p class="alternative-link"><a href="/templates/MR_profile.html">Try another way</a></p>
+    </div>
+</body>
+</html>

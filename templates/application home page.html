@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Status Dashboard</title>
+    <link rel="stylesheet" href="/static/css/application home page.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="student-info">
+                <br>
+                <p><strong>Student ID: 1234567890</strong></p>
+                <br>
+                <br>
+                <p>Last Login Date & Time:</p>
+                    <br>
+                    <p>09-09-2024 12:45 pm</p>
+                <br>
+            </div>
+            <ul>
+                <li><a href="application home page.html" class="active"><i class="icon-home"></i> Home</a></li>
+                <br>
+                <li><a href="#"><i class="icon-profile"></i> View Basic Profile</a></li>
+                <br>
+                <li><a href="#"><i class="icon-update"></i> Add / Update Profile</a></li>
+                <br>
+                <li><a href="#"><i class="icon-academic"></i> Academic Details</a></li>
+                <br>
+                <li><a href="#"><i class="icon-bank"></i> Bank Detail</a></li>
+                <br>
+                <li><a href="#"><i class="icon-document"></i> Document Upload</a></li>
+                <br>
+                <li><a href="#"><i class="icon-lock"></i> Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <br>
+            <!-- Stepwise Progress Bar -->
+            <div class="progress-bar">
+                <h3>Stepwise Progress Status for Current Year Scholarship</h3>
+                <br>
+                <p>NOTE: Please complete all the 7 steps and lock your application.</p>
+                <br>
+                <br>
+                <ul class="steps">
+                    <li class="completed">1. Student Registration</li>
+                    <li class="completed">2. Profile Updation</li>
+                    <li class="completed">3. Academic Details</li>
+                    <li class="completed">4. Bank Details</li>
+                    <li class="completed">5. Caste & Domicile</li>
+                    <li class="completed">6. Income Certificate</li>
+                    <li class="pending">7. Lock Application</li>
+                </ul>
+            </div>
+
+            <!-- Current Status Section -->
+            <div class="current-status">
+                <br>
+                <h3>Current Status</h3>
+                <br>
+                <br>
+                <div class="status-info">
+                    <p><strong>Academic Year:</strong> 2021-22</p>
+                    <br>
+                    <p><strong>Application ID:</strong> 1234567890</p>
+                    <br>
+                    <p><strong>Application Date:</strong> 01-09-2024</p>
+                    <br>
+                    <p><strong>Application Current Status:</strong> Application Temporarily Rejected by Institute (During Verification)</p>
+                    <br>
+                    <p><strong>Pending Status:</strong> Pending for Correction by Student</p>
+                    <br>
+                    <p><strong>Rejection Reason:</strong> Aadhaar Authentication (e-KYC) Failed</p>
+                    <br>
+                    <p><strong>Rejection Remarks:</strong> OK</p>
+                    <br>
+                </div>
+            </div>
+
+            <!-- Scholarship Status Tracking -->
+            <div class="scholarship-tracking">
+                <br>
+                <h3>Scholarship Status Tracking</h3>
+                <br>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Application Status</th>
+                            <th>Status Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Application Submitted to Institute</td>
+                            <td>01-09-2024</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Application Received by Institute</td>
+                            <td>01-09-2024</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Application Temporarily Rejected by Institute</td>
+                            <td>08-09-2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+
+            <!-- Aadhaar e-KYC Status -->
+            <div class="aadhaar-status">
+                <br>
+                <h3>Aadhaar e-KYC Status</h3>
+                <div class="aadhaar-info">
+                    <p>Aadhaar Authentication Failed</p>
+                    <button>Click Here For E-KYC</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiLocker Consent Page</title>
+    <link rel="stylesheet" href="/static/css/DigiLocker Consent Page.css">
+    <script defer src="DigiLocker Consent Page.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/static/images/digilocker logo.webp" alt="DigiLocker Logo" class="digilocker-logo">
+        </div>
+        <h2>Please provide your consent to share the following with <strong>PMSSS</strong>:</h2>
+        <form id="consent-form">
+            <div class="documents-section">
+                <h3>Issued Documents (3)</h3>
+                <label><input type="checkbox" id="select-all"> Select all</label>
+                <ul>
+                    <li>
+                        <label><input type="checkbox" class="document" value="Aadhaar Card"> Aadhaar Card (XX4132)</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="document" value="Driving License"> Driving License (can be accessed)</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="document" value="PAN Verification"> PAN Verification Record (can be accessed)</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="additional-info">
+                <label><input type="checkbox" class="info"> DigiLocker Drive</label>
+                <label><input type="checkbox" class="info"> Profile information (Name, Date of Birth, Gender)</label>
+                <label><input type="checkbox" class="info"> Get your Email</label>
+                <label><input type="checkbox" class="info" disabled> Not available</label>
+                <label><input type="checkbox" class="info"> Get your care of person name</label>
+                <label><input type="checkbox" class="info"> Get your address</label>
+                <label><input type="checkbox" class="info"> Get your profile picture</label>
+            </div>
+            <div class="consent-validity">
+                <p>Consent validity date (Today + 30 days):</p>
+                <p>01-March-2024 <a href="#" id="edit-consent-date">Edit</a></p>
+            </div>
+            <div class="purpose">
+                <p>Purpose:</p>
+                <select id="purpose-select">
+                    <option value="kyc">Select</option>
+                    <option value="kyc">Scholarship Registration</option>
+                    <option value="kyc">Government Registration</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button type="button" id="deny-btn">Deny</button>
+                <button href="/templates/student_details.html" type="submit" id="allow-btn">Allow</button>
+            </div>
+            <p class="consent-text">Consent validity is subject to applicable laws.<br>By clicking 'Allow', you are giving consent to share with <strong>PMSSS</strong>.</p>
+        </form>
+    </form>
+            
+    <script>
+        document.getElementById('consent-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = "/templates/student_details.html";  // Redirect to the login page
+        });  
+    </script>
+    </form>
+        
+    </div>
+</body>
+</html>

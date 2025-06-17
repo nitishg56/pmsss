@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Income Certificate - Student Registration</title>
+    <link rel="stylesheet" href="/static/css/IC_details.css">
+</head>
+<body>
+   
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo and Title -->
+                <div class="left-section">
+                    <img src="/static/images/AICTE_logo.png" alt="Logo" class="logo">
+                    <div class="department-title">
+                       <b>
+                        <h1>Special Scholarship Scheme for J&K and Ladakh (PM-USPY)</h1>
+                       </b>
+                    </div>
+                </div>
+        
+                <!-- Profile Picture and Language Button -->
+                <div id="google_translate_element"></div>
+            </div>
+        
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="/templates/S_registration.html">1. Student Registration</a></li>
+                    <li><a href="/templates/P_update.html">2. Profile Updation</a></li>
+                    <li><a href="/templates/Notification.html">3. Academic Details</a></li>
+                    <li><a href="/templates/B_details.html">4. Bank Details</a></li>
+                    <li><a href="/templates/CD_detail.html">5. Caste & Domicile</a></li>
+                    <li><a href="/templates/IC_details.html">6. Income Certificate</a></li>
+                    <li><a href="/templates/LA_details.html">7. Lock Application</a></li>
+                </ul>
+            </nav>
+    
+    <div class="container">
+        <form action="IncomeCertificateServlet" method="POST" id="incomeCertificateForm">
+            <div class="form-section">
+                <div class="notes">
+                    <p class="note-text">NOTE:</p>
+                    <ol>
+                        <li>Fields marked with (<span class="required">*</span>) are mandatory.</li>
+                        <li>Income certificate is required to be taken only once during a course duration.</li>
+                    </ol>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="annualIncome">Annual Income<span class="required">*</span></label>
+                        <input type="number" 
+                               id="annualIncome" 
+                               name="annualIncome" 
+                               value="" 
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmAnnualIncome">Confirm Annual Income<span class="required">*</span></label>
+                        <input type="number" 
+                               id="confirmAnnualIncome" 
+                               name="confirmAnnualIncome" 
+                               value="" 
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Is your Income Certificate generated online?<span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="isOnline" value="yes" checked> Yes
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="isOnline" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Certificate Generated From<span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="certificateSource" value="eDistrict" checked> eDistrict
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="referenceNumber">Certificate / Application Reference Number<span class="required">*</span></label>
+                    <input type="text" 
+                           id="referenceNumber" 
+                           name="referenceNumber" 
+                           value="" 
+                           pattern="[0-9]{16}" 
+                           required>
+                </div>
+
+                <div class="success-message">
+                    "Annual Income & Income Certificate is already uploaded for your current course"
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit"><a href="/templates/S_registration.html">Cancel </a></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logos -->
+            <div class="footer-logos">
+                <img src="/static/images/meity_logo.png" alt="MeitY Logo">
+                <br>
+                <br>
+            <img src="/static/images/nic_logo.png" alt="NIC Logo">
+            <br>
+            <br>
+            <img src="/static/images/Digital logo.png" alt="MyGov Logo">
+            <br>
+            <br>
+            <img src="/static/images/DBTBharat_logo.png" alt="DBT Bharat Logo">
+            <br>
+            <br>
+            <img src="/static/images/data.png" alt="India.gov.in Logo">
+            <br>
+            <br>
+            </div>
+    <B>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <a href="/templates/copyright.html">Copyright Policy</a>
+                <span>|</span>
+                <a href="/templates/Privacy Policy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="/templates/Terms Conditions.html">Terms and Conditions</a>
+                <span>|</span>
+                <a href="/templates/Disclaimer.html">Disclaimer</a>
+                <span>|</span>
+                <a href="/templates/Hyperlink.html">Hyperlink</a>
+                <span>|</span>
+                <a href="/templates/Site Map.html">Site Map</a>
+            </div>
+        </div>
+        <br>
+    
+        <!-- Update Information -->
+        <div class="footer-update">
+            Last update on 10 September 2024
+        </div>
+    </footer>
+
+    <script src="/static/js/IC_details.js"></script>
+</body>
+</html>
